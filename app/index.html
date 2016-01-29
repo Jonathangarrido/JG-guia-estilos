@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JG Guia de estilos</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Coloca favicon.ico y apple-touch-icon(s) en el directorio raíz -->
+  
+  <!-- build:css css/style.min.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="lib/bxslider-4/dist/jquery.bxslider.css" />
+  <!-- endbower -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browsehappy">Estás usando un navegador <strong>desactualizado</strong>.Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a>Para mejorar la experien
+  <![endif]-->
+
+  <!-- NAV -->
+  <div id="menu-colapsable">
+    <div class="colapsable-menu colapsable">
+      <div class="colapsable-fondo"onclick="clickColapsable('cerrar')"></div>
+      <div class="colapsable-nav">
+        <nav>
+          <span class="colapsable-btn colapsable-cerrar"onclick="clickColapsable('cerrar')"></span>
+          <ul>
+            <li><a href="#typografia">Typografia</a></li>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#icons">Icons</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#nav">Nav</a></li>
+            <li><a href="#bx-slider">Bx-slider</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#texturas">Texturas</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#modal">Modal</a></li>
+            <li><a href="#full-home">Full-home</a></li>
+          </ul>
+        </nav>
+      </div>
+      <span class="colapsable-btn colapsable-abrir" onclick="clickColapsable('abrir')"></span>
+      <div id="colapsable-area"></div>
+    </div>
+    <div class="colapsable-contenido">
+
+
+
+    <!-- TYPOGRAPHY -->
+    <h4 class="titulo" id="typografia">TYPOGRAPHY</h4>
+    <section class="container">
+      <div class="row">
+        <div class="c50-s">
+          Etiquetas:
+          <h1>H1</h1>
+          <h2>H2</h2>
+          <h3>H3</h3>
+          <h4>H4</h4>
+          <h5>H5</h5>
+          <h6>H6</h6>
+          <p class="no-margin">P</p>
+        </div>
+        <div class="c50-s">
+          Clases:
+          <p class="h1">.h1</p>
+          <p class="h2">.h2</p>
+          <p class="h3">.h3</p>
+          <p class="h4">.h4</p>
+          <p class="h5">.h5</p>
+          <p class="h6">.h6</p>
+        </div>
+      </div>
+    </section>
+    <!-- GRID -->
+    <h4 class="titulo" id="grid">GRID</h4>
+    <section class="container">
+      <div class="row">
+        <div class="c100-s"><span class="s">simpre dentro de .row</span></div>
+        <div class="c100-s grid-color">c100-s</div>
+        <div class="c80-s grid-color">c80-s</div>
+        <div class="c20-s grid-color">c20-s</div>
+        <div class="c75-s grid-color">c75-s</div>
+        <div class="c25-s grid-color">c25-s</div>
+        <div class="c60-s grid-color">c60-s</div>
+        <div class="c40-s grid-color">c40-s</div>
+        <div class="c50-s grid-color">c50-s</div>
+        <div class="c50-s grid-color">c50-s</div>
+        <div class="c33-s grid-color">c33-s</div>
+        <div class="c33-s grid-color">c33-s</div>
+        <div class="c33-s grid-color">c33-s</div>
+        <div class="c25-s grid-color">c25-s</div>
+        <div class="c25-s grid-color">c25-s</div>
+        <div class="c25-s grid-color">c25-s</div>
+        <div class="c25-s grid-color">c33-s</div>
+
+        <div class="c100-s">
+          <h4>POR TAMAÑO</h4>
+        </div>
+        <div class="c100-s grid-color">c100-s</div>
+        <div class="c100-s c50-m c25-l grid-color">c100-s c50-m c25-l</div>
+        <div class="c100-s c50-m c25-l grid-color">c100-s c50-m c25-l</div>
+        <div class="c100-s c50-m c25-l grid-color">c100-s c50-m c25-l</div>
+        <div class="c100-s c50-m c25-l grid-color">c100-s c50-m c25-l</div>
+
+        <div class="c100-s"><h4>HIDDEN</h4></div>
+        <div class="c50-s c-hidden-s grid-color">c-hidden-s</div>
+        <div class="c50-s c-hidden-m grid-color">c-hidden-m</div>
+        <div class="c50-s c-hidden-l grid-color">c-hidden-l</div>
+
+        <div class="c100-s"><h4>VISIBLE</h4></div>
+        <div class="c100-s c-visible-s grid-color">c-visible-s</div>
+        <div class="c100-s c-visible-m grid-color">c-visible-m</div>
+        <div class="c100-s c-visible-l grid-color">c-hidden-l</div>
+      </div> 
+    </section>
+    <!-- ICONS -->
+    <h4 class="titulo" id="icons">ICONS</h4>
+    <section class="container">
+      <div class="row iconos-conte">
+        <div class="c100-s"><span class="s">Anteponer ico--</span></div>
+        <div><div class="ico--download"></div>download</div>
+        <div><div class="ico--download2"></div>download2</div>
+        <div><div class="ico--download3"></div>download3</div>
+        <div><div class="ico--menu1"></div>menu1</div>
+        <div><div class="ico--menu2"></div>menu2</div>
+        <div><div class="ico--menu3"></div>menu3</div>
+        <div><div class="ico--check1"></div>check1</div>
+        <div><div class="ico--check2"></div>check2</div>
+        <div><div class="ico--close1"></div>close1</div>
+        <div><div class="ico--close2"></div>close2</div>
+        <div><div class="ico--plus"></div>plus</div>
+        <div><div class="ico--minus"></div>minus</div>
+        <div><div class="ico--arrow-up"></div>arrow-up</div>
+        <div><div class="ico--arrow-down"></div>arrow-down</div>
+        <div><div class="ico--arrow-right"></div>arrow-right</div>
+        <div><div class="ico--arrow-left"></div>arrow-left</div>
+        <div><div class="ico--circle-up"></div>circle-up</div>
+        <div><div class="ico--circle-down"></div>circle-down</div>
+        <div><div class="ico--circle-right"></div>circle-right</div>
+        <div><div class="ico--circle-left"></div>circle-left</div>
+        <div><div class="ico--triangle-up"></div>triangle-up</div>
+        <div><div class="ico--triangle-down"></div>triangle-down</div>
+        <div><div class="ico--triangle-right"></div>triangle-right</div>
+        <div><div class="ico--triangle-left"></div>triangle-left</div>
+        <div><div class="ico--mail"></div>mail</div>
+        <div><div class="ico--network"></div>network</div>
+        <div><div class="ico--pencil"></div>pencil</div>
+        <div><div class="ico--phone"></div>phone</div>
+        <div><div class="ico--facebook"></div>facebook</div>
+        <div><div class="ico--github"></div>github</div>
+        <div><div class="ico--google"></div>google</div>
+        <div><div class="ico--instagram"></div>instagram</div>
+        <div><div class="ico--linkedin"></div>linkedin</div>
+        <div><div class="ico--twitter"></div>twitter</div>
+        <div><div class="ico--youtube"></div>youtube</div>
+      </div>
+    </section>
+    <!-- FORMS -->
+    <h4 class="titulo" id="forms">FORMS</h4>
+    <section class="container">
+      <div class="row">
+        <div class="c100-s">
+          <p class="no-margin">Input</p>
+          <input type="text"placeholder="Nombre">
+        </div>
+        <div class="c100-s">
+          <p class="no-margin">Textarea</p>
+          <textarea name="" id=""placeholder="Comentario..."></textarea>
+        </div>
+        <div class="c100-s">
+          <p class="no-margin">Select</p>
+          <select name="" id="" required>
+            <option value="">--seleccione--</option>
+            <option value="opcion1">--opcion1--</option>
+            <option value="opcion2">--opcion2--</option>
+            <option value="opcion3">--opcion3--</option>
+            <option value="opcion4">--opcion4--</option>
+          </select>
+        </div>
+        <div class="c100-s">
+          <p class="no-margin">Radio</p>
+          <input type="radio"name="radio"value="option1" id="radio1">
+          <label for="radio1">opcion1</label>
+          <input type="radio"name="radio"value="option2" id="radio2">
+          <label for="radio2">opcion2</label>
+          <input type="radio"name="radio"value="option3" id="radio3">
+          <label for="radio3">opcion3</label>
+        </div>
+        <div class="c100-s">
+          <p class="no-margin">Checkbox</p>
+          <input type="checkbox" name="checkbox1" value="opcion1" id="checkbox1">
+          <label for="checkbox1">opcion1</label>
+          <input type="checkbox" name="checkbox1" value="opcion2" id="checkbox2">
+          <label for="checkbox2">opcion2</label>
+          <input type="checkbox" name="checkbox1" value="opcion3" id="checkbox3">
+          <label for="checkbox3">opcion3</label>
+        </div>
+      </div>
+    </section>
+    <!-- TABLE -->
+    <h4 class="titulo" id="tables">TABLES</h4>
+    <section class="container txt-center">
+      <br>
+      <p>Normal</p>
+      <table>
+        <tr>
+          <th>dato</th>
+          <th>dato</th>
+          <th>dato</th>
+          <th>dato</th>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+      </table>
+      <p>table-striped</p>
+      <table class="table-striped">
+        <tr>
+          <th>dato</th>
+          <th>dato</th>
+          <th>dato</th>
+          <th>dato</th>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+        <tr>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+          <td>dato</td>
+        </tr>
+      </table>
+    </section>
+    <!-- NAV -->
+    <h4 class="titulo" id="nav">NAV</h4>
+      <section class="txt-center">
+      <div class="nav1">
+        <div class="nav">
+          <input type="checkbox"id="nav--checkbox">
+          <label for="nav--checkbox"class='nav--checkbox'></label>
+          <nav>
+            <ul>
+              <li class="logo"><img src="" alt="logo.jpg"></li>
+              <li><a href="#uno">uno</a></li>
+              <li><a href="#dos">dos</a></li>
+              <li><a href="#tres">tres</a></li>
+              <li><a href="#cuatro">cuatro</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+      
+    </section>
+    <!-- BX-SLIDER -->
+    <h4 class="titulo" id="bx-slider" onclick="hola()">BX-SLIDER</h4>
+    <section>
+      <ul class="bxslider">
+        <li><img src="./images/img1.jpg" /></li>
+        <li><img src="./images/img2.jpg" /></li>
+      </ul> 
+    </section>
+    <!-- BOTONES -->
+    <h4 class="titulo" id="buttons">BUTTONS</h4>
+    <section class="container txt-center">
+      <br>
+      <div>
+        <p class="s no-margin">Rellenos</p>
+        <button class="btn--info">INFO</button>
+        <button class="btn--error">ERROR</button>
+        <button class="btn--warning">WARNING</button>
+        <button class="btn--success">SUCCESS</button>
+        <button class="btn--primary">PRIMARY</button>
+        <button class="btn--disabled">DISABLED</button>
+        <br><br>
+        <p class="s no-margin">Bordes</p>
+        <button class="btn--bordes--info">INFO</button>
+        <button class="btn--bordes--error">ERROR</button>
+        <button class="btn--bordes--warning">WARNING</button>
+        <button class="btn--bordes--success">SUCCESS</button>
+        <button class="btn--bordes--primary">PRIMARY</button>
+        <button class="btn--bordes--disabled">DISABLED</button>
+      </div>
+    </section>
+    <!-- TEXTURAS -->
+    <h4 class="titulo" id="texturas">TEXTURAS</h4>
+    <section class="container txt-center">
+      <p>ALERT</p>
+      <div class="row">
+        <div class="c100-s c50-m"><div class="alert--success">success</div></div>
+        <div class="c100-s c50-m"><div class="alert--warning">warning</div></div>
+        <div class="c100-s c50-m"><div class="alert--error">error</div></div>
+        <div class="c100-s c50-m"><div class="alert--info">info</div></div>
+        <div class="c100-s c50-m">
+          <div class="alert--block">
+            <div class="alert--heading">
+              Titulo
+            </div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni saepe deleniti tempore quibusdam. Dolores, harum suscipit odio! Iure facilis ex odio ipsum at repudiandae. Officia voluptatibus quisquam eligendi a nesciunt?
+          </div>
+        </div>
+      </div>
+      <p>BADGE</p>
+      <div class="row">
+        <div class="c100-s c50-m"><div class="badge--primary">primary</div></div>
+        <div class="c100-s c50-m"><div class="badge--error">error</div></div>
+        <div class="c100-s c50-m"><div class="badge--warning">warning</div></div>
+        <div class="c100-s c50-m"><div class="badge--success">success</div></div>
+        <div class="c100-s c50-m"><div class="badge--info">info</div></div>
+        <div class="c100-s c50-m"><div class="badge--icon">icon</div></div>
+      </div>
+    </section>
+    <!-- VIDEO -->
+    <h4 class="titulo" id="video">VIDEO</h4>
+      <section>
+        <div class="video-conte">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/qlnmMnibs9A" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    <!-- MODAL -->
+    <h4 class="titulo" id="modal">MODAL</h4>
+    <section>
+      <div class="row">
+        <div class="c50-s">
+          <div class="modal--conte">
+            <button class="btn--info modal--btn" data-modal="small">Modal</button>
+            <div class="modal--info">
+              Enviado.
+            </div>
+          </div>
+        </div>
+        <div class="c50-s">
+          <div class="modal--conte">
+        <button class="btn--info modal--btn"data-modal="large">Modal large</button>
+        <div class="modal--info">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit? <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident beatae atque quam a eligendi dolor voluptates perspiciatis laboriosam doloremque. Ipsa natus enim facere, eos quidem consectetur vitae minus praesentium reprehenderit?
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+    <!-- FULL-HOME -->
+    <h4 class="titulo" id="full-home">Full-home</h4>
+    <section>
+      <div class="full-home">
+        <div class="titulo">
+          Titulo
+        </div>
+      </div>
+    </section>
+
+
+
+
+    </div>
+  </div>
+  <!-- build:js js/vendor.min.js -->
+  <!-- bower:js -->
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/bxslider-4/dist/jquery.bxslider.js"></script>
+  <script src="lib/hammerjs/hammer.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js js/app.min.js -->
+  <!-- inject:js -->
+  <script src="/scripts/1-menu-colapsable.js"></script>
+  <script src="/scripts/2-modal.js"></script>
+  <script src="/scripts/3-full-home.js"></script>
+  <script src="/scripts/main.js"></script>
+  <!-- endinject -->
+  <!-- endbuild -->
+
+</body>
+</html>

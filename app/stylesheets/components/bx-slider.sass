@@ -1,0 +1,77 @@
+// INCLUIR
+  // - Agregar la libreria: 
+  //   bower install --save bxslider-4
+
+  // -Agregar al app/scripts/main.js
+  //   $('.bxslider').bxSlider({infiniteLoop: false,hideControlOnEnd: true,pager: false,nextText: '',prevText: ''});
+
+  // -Activar variables en app/stylesheets/utils/variables.sass
+  //   $incluir-iconos: true!default
+  //   $incluir-bxslider: true!default
+
+  // -HTML
+  //   <ul class="bxslider">
+  //     <li><img src="/images/img1.jpg" /></li>
+  //     <li><img src="/images/img2.jpg" /></li>
+  //   </ul> 
+
+@if $incluir-bxslider == true
+  /*------------------------------------
+    ·BX-SLIDER
+    ------------------------------------*/
+
+  .bx-wrapper
+    box-shadow: none
+    border: none
+    margin: 0
+
+    img 
+      max-width: none
+      width: 100%
+
+    // PAGER */
+    .bx-pager 
+      position: absolute
+      bottom: 0
+      left: 0
+      padding: .4rem 0 1rem
+
+    // DIRECTION CONTROLS (NEXT / PREV) */
+    $bx-controls-direction-alto: 200
+    $bx-controls-direction-ancho: 50
+    $bx-controls-direction-color: $white
+
+    .bx-controls-direction
+      a
+        top: 50%
+        margin: $bx-controls-direction-alto/2*-1px 0 0 0
+        height: $bx-controls-direction-alto * 1px
+        width: $bx-controls-direction-ancho * 1px
+        background: none
+        font-family: icomoon
+        font-size: $fs-iconos
+        text-indent: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        color: rgba($bx-controls-direction-color,.6)
+        z-index: $index-1
+        &:hover
+          color: rgba($bx-controls-direction-color,1)
+        @include respond-to(l)
+          font-size: $fs-iconos * 2
+
+    .bx-prev 
+      background: none
+      left: 0
+      &:after
+        content: '\e913'
+    .bx-next 
+      background: none
+      right: 0
+      &:after
+        content: '\e914'
+
+  // LOADER */
+  .bx-loading 
+    background: none

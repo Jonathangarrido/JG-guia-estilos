@@ -1,0 +1,24 @@
+{
+  "name": "angular",
+  "description": "",
+  "main": "Gulpfile.js",
+  "authors": [
+    "jonathan <jonathan.garrido1988@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bxslider-4": "~4.2.5",
+    "hammerjs": "~2.0.6"
+  }
+}

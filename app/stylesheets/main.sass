@@ -1,0 +1,67 @@
+@import 'utils/variables'
+@import 'utils/mixins'
+
+@import 'base/reset'
+@import 'base/typography'
+
+@import 'layout/grid'
+@import 'layout/icons'
+@import 'layout/forms'
+@import 'layout/links'
+@import 'layout/table'
+@import 'layout/nav'
+
+@import 'components/bx-slider'
+@import 'components/button'
+@import 'components/texturas'
+@import 'components/abstracciones'
+@import 'components/imagen'
+@import 'components/video'
+@import 'components/modal'
+@import 'components/full-home'
+
+// body 
+//   background: $color-info
+//   @include respond-to(m)
+//     background: $color-alert
+
+.titulo
+  box-shadow: 0px 2px 20px rgba(black,.2)
+  padding: 2rem 0
+  color: white
+  text-align: center
+  color: $secondary
+
+.grid-color
+  border: white 1px solid
+  background-color: rgba($tertiary,.4)
+
+.iconos-conte
+  &>div:not(:first-child)
+    margin: $paddingpage/2 $paddingpage
+
+  &>div:nth-child(2)
+    margin: 0
+
+.nav1 
+  overflow: hidden
+  position: relative
+  height: 20rem
+  width: 100%
+  margin: 1rem 0
+  border: solid 2px black
+
+code
+  display: block
+  border: 1px solid gray
+  padding: 1rem
+  margin: 1rem 0
+  text-align: left
+
+.full-home
+  @include full-home()
+
+
+
+.orange 
+  background-color: orange

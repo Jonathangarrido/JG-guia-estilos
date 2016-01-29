@@ -1,0 +1,183 @@
+/* ------------------------------------
+      ·Typography
+  -------------------------------------*/
+html,
+body
+  font-size: $basefontsize
+  font-family: $basefont
+  font-weight: $baseheadingfontweight
+  line-height: $baselineheight
+  background-color: $background
+  color: $textcolor
+
+// HEADINGS ====================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin : 0
+  font-family : $baseheadingfont
+  font-weight : $baseheadingfontweight
+  color : $baseheadingfontcolor
+  text-rendering : optimizelegibility
+  &.altheader
+    color: $grey
+    text-transform: uppercase
+    display: block
+
+// Set headers line-height, margin bottom and font size
+@each $header,$margin-bot,$font-size,$line-height in (h1, 0, 2.8, 1.5)(h2, 0, 2.4, 1.5)(h3, 0, 2.1, 1.5)(h4, 0, 1.8, 1.5)(h5, 0, 1.6, 1.5)(h6, 0, 1.4, 1.5)
+
+  #{$header}, .#{$header} 
+    margin-bottom : $margin-bot
+    font-size: ($font-size) * 1rem
+    line-height : $line-height
+
+@each $nombre, $font-size in (xs, .5)(s,.8)(m,1.2)(l,2)(xl,3)
+  .#{$nombre}
+    font-size: ($font-size) * 1rem
+
+// TYPOGRAFÍA ====================================================
+
+p,
+ol,
+ul,
+dl,
+address
+  margin-bottom : $baselineheight
+  line-height : $baselineheight
+
+ul,
+ol
+  margin : 0 0 $baselineheight 0
+
+li ul,
+li ol
+  margin : 0
+
+li
+  list-style: none
+
+hr
+  clear : both
+  display : block
+  margin : $baselineheight 0
+  padding : 0
+  height : 1px
+  border : 0
+  border-top : 1px solid $bordercolor
+
+b, strong
+  font-weight : bold
+
+
+// Web Colours
+::selection 
+  background-color : $basecolor 
+  color: $white
+
+
+// TYPOGRAFÍA EXTRA====================================================
+
+
+@if $incluir-typografia-extra == true
+
+  blockquote 
+    margin : 0 0 $baselineheight 0
+    padding-left : $gutterwidth
+    border-left : 2px solid $bordercolor
+    font-family : $altfont
+    font-style : normal
+    p
+      font-size: fs(small)
+      color: $grey
+      font-style: italic
+      line-height: 1.5
+
+  q
+    quotes : none
+    font-style: italic
+
+  blockquote p::before,
+  blockquote p::after,
+  q:before,
+  q:after
+    content : ""
+
+  cite
+    font-style : normal
+
+  // definition lists
+
+  dl,
+  dd
+    margin-bottom : $baselineheight
+
+  dt
+    font-weight : bold
+
+  .dl-horizontal
+
+    dt
+      float : left
+      clear : left
+      width : 20.25%
+      text-align : right
+
+    dd
+      margin-left : 22.78%
+
+  // text-level
+
+  abbr[title]
+    border-bottom : 1px dotted $bordercolor
+    cursor : help
+
+  dfn
+    font-style : italic
+
+  ins
+    background-color : lighten($basecolor, 75%)
+    color : $textcolor
+    text-decoration : none
+
+  mark
+    background-color : yellow
+    color : $textcolor
+
+  pre,
+  code,
+  kbd,
+  samp
+    font-family : $codefont
+    font-size: fs(small)
+    line-height : $baselineheight
+  code
+    background-color: #f5f2f0
+    padding: 0.1em 0.3em
+    border-radius: $radius
+  pre
+    white-space : pre
+    white-space : pre-wrap
+    word-wrap : break-word
+
+  sub,
+  sup
+    position : relative
+    font-size: fs(x-small)
+    line-height : 0
+    vertical-align : $baselineheight
+
+  sup
+    top : -.5em
+
+  sub
+    bottom : -.25em
+
+
+
+
+

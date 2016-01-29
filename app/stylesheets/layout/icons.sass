@@ -1,0 +1,61 @@
+@if $incluir-iconos == true
+  /*------------------------------------
+    ·ICONOS
+    ------------------------------------*/
+  $font-family-icon: 'icomoon'
+
+  @font-face 
+    font-family: $font-family-icon
+    src: url('#{$font-dir}/icomoon.eot?haldl4'),url('#{$font-dir}/icomoon.eot?haldl4#iefix') format('embedded-opentype'),url('#{$font-dir}/icomoon.ttf?haldl4') format('truetype'),url('#{$font-dir}/icomoon.woff?haldl4') format('woff'),url('#{$font-dir}/icomoon.svg?haldl4#icomoon') format('svg')
+    font-weight: normal
+    font-style: normal
+
+  $iconos: ("download","\e2c0")("download2","\e909")("download3","\e91b")("menu1","\e3c7")("menu2","\e5d2")("menu3","\e924")("check1","\e5ca")("check2","\e921")("close1","\e5cd")("close2","\e922")("plus","\e926")("minus","\e925")("arrow-down","\e912")("arrow-left","\e913")("arrow-right","\e914")("arrow-up","\e915")("circle-down","\e917")("circle-left","\e918")("circle-right","\e919")("circle-up","\e91a")("triangle-down","\e91d")("triangle-left","\e91e")("triangle-right","\e91f")("triangle-up","\e920")("mail","\e900")("network","\e903")("pencil","\e901")("phone","\e902")("facebook","\e92a")("github","\e92c")("google","\e92e")("instagram","\e930")("linkedin","\e932")("twitter","\e934")("youtube","\e936")
+
+  %ico
+    font-family: icomoon
+    font-size: 2rem
+    color: $ico-color
+
+  @each $i-nombre, $i-codigo in $iconos
+    .ico--#{$i-nombre}
+      @extend %ico
+      &:before
+        content: $i-codigo
+
+
+  // ("download","\e2c0")
+  // ("downlod2","\e909")
+  // ("download3","\e91b")
+  // ("menu1","\e3c7")
+  // ("menu2","\e5d2")
+  // ("menu3","\e924")
+  // ("check1","\e5ca")
+  // ("check2","\e921")
+  // ("close1","\e5cd")
+  // ("close2","\e922")
+  // ("plus","\e926")
+  // ("minus","\e925")
+  // ("arrow-down","\e912")
+  // ("arrow-left","\e913")
+  // ("arrow-right","\e914")
+  // ("arrow-up","\e915")
+  // ("circle-down","\e917")
+  // ("circle-left","\e918")
+  // ("circle-right","\e919")
+  // ("circle-up","\e91a")
+  // ("triangle-down","\e91d")
+  // ("triangle-left","\e91e")
+  // ("triangle-right","\e91f")
+  // ("triangle-up","\e920")
+  // ("mail","\e900",$mail)
+  // ("network","\e903")
+  // ("pencil","\e901")
+  // ("phone","\e902")
+  // ("facebook","\e92a",$fb)
+  // ("github","\e92c")
+  // ("google","\e92e",$googleplus)
+  // ("instagram","\e930",$instagram)
+  // ("linkedin","\e932",$linkedin)
+  // ("twitter","\e934",$tw)
+  // ("youtube","\e936",$youtube)

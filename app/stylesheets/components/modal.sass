@@ -1,0 +1,77 @@
+@if $incluir-modal == true
+
+  /*------------------------------------
+      ·MODAL
+   ------------------------------------*/
+  
+  // HTML
+  // <div class="modal--conte">
+  //   <button class="btn--info modal--btn" data-modal="small">modal</button>
+  //   <div class="modal--info">
+      
+  //   </div>
+  // </div>
+
+  // data-modal: small ó large;
+
+
+  .modal
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: $modal-background
+    z-index: $index-4
+    padding: 2rem
+    overflow-y: scroll
+
+    &-contenedor
+      display: flex
+      align-items: center
+      width: 100%
+
+    &-center
+      height: 100%
+      justify-content: center
+
+    &-info
+      background-color: $modal-info-background
+      border-radius: $radius 
+      padding: 1rem
+      text-align: center
+      z-index: $index-4
+      margin-top: -3rem
+      @include max-width($modal-width)
+      width: 100%
+      opacity: 0
+      transition: all .3s ease-in-out
+      position: relative
+
+    .entrada
+      margin-top: 0
+      opacity: 1
+
+    & button
+      font-size: 1rem
+    
+    &-cerrar
+      border: none
+      background-color: $modal-cerrar-color
+      font-family: icomoon
+      color: $white
+      border-radius: 50%
+      height: $modal-cerrar-dimension
+      width: $modal-cerrar-dimension
+      display: flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      top: $modal-cerrar-dimension/2 * -1
+      right: $modal-cerrar-dimension/2 * -1
+      &:before
+        content: "\e5cd"
+    &--info
+      display: none
+    

@@ -1,0 +1,33 @@
+@if $incluir-fullHome == true
+
+  //FULL HOME
+  $full-home-color: $white
+  $invert-full-home-color: invert($full-home-color)
+
+  %full-home
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    position: relative
+    color: $full-home-color
+    padding: 0 1rem
+
+    .titulo
+      background-color: rgba($invert-full-home-color,.2)
+      padding: .5em
+      border: 2px solid rgba($full-home-color,.9)
+      color: $full-home-color
+      font-size: 3rem
+      border-radius: $radius
+      line-height: 1em
+
+  @mixin full-home($img : 'fondo')
+    background-image: url('#{$image-dir}/#{$img}-s.jpg')
+    @extend %full-home
+    @include respond-to('m')
+      background-image: url('#{$image-dir}/#{$img}.jpg')

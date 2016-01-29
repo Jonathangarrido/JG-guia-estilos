@@ -1,0 +1,87 @@
+@if $incluir-grid == true
+
+  $incluir-hidden-visible : true
+  /*------------------------------------
+    ·GRID
+    ------------------------------------*/
+
+  // Contenedor de columnas
+  .row
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    text-align: center
+
+  // Ancho de columnas en %
+  // 20 25 33 40 50 60 75 80 100
+  $cols: 20 25 33 40 50 60 75 80 100
+
+  // Generador de columnas
+  @mixin columnas
+    @each $col in $cols
+      @if $col == 33
+        .c#{$col}-#{$pantalla}
+          flex-basis: 33.333333333 * 1%
+          width: 33.333333333 * 1%
+          padding: $paddingpage/2
+
+
+      @else
+        .c#{$col}-#{$pantalla}
+          flex-basis: $col * 1%
+          width: $col * 1%
+          padding: $paddingpage/2
+  
+  // Agraga columnas a los media query
+  @each $pantalla, $pixel in $breakpoints
+    @if $pantalla == s
+      @include columnas
+    @else
+      @media only screen and (min-width: $pixel)
+        @include columnas
+
+
+  @if $incluir-hidden-visible == true
+    /*------------------------------------
+      ·HIDDEN VISIBLE
+      ------------------------------------*/
+    .c-hidden-s
+      display: none
+
+    .c-hidden-m
+      display: block
+
+    .c-hidden-l
+      display: block
+
+
+    .c-visible-s
+      display: block
+
+    .c-visible-m
+      display: none
+
+    .c-visible-l
+      display: none
+
+    @include respond-to(m)
+      .c-hidden-s
+        display: block
+      .c-hidden-m
+        display: none
+
+      .c-visible-s
+        display: none
+      .c-visible-m
+        display: block
+
+    @include respond-to(l)
+      .c-hidden-m
+        display: block
+      .c-hidden-l
+        display: none
+      .c-visible-m
+        display: none
+      .c-visible-l
+        display: block
+

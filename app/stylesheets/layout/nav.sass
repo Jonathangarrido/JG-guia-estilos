@@ -1,0 +1,229 @@
+@if $incluir-nav == true
+  /*------------------------------------
+      ·NAV
+   ------------------------------------*/
+  $incluir-nav-normal : true
+  $incluir-nav-colapsable: true
+
+
+
+  @if $incluir-nav-normal == true
+    .nav
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      z-index: $index-4
+      @include respond-to(m)
+        background-color: rgba(red,.2)
+        position: relative
+
+      input
+        display: none
+        &:checked 
+          ~ .nav--checkbox
+            &:after
+              content: "\e5cd"
+              text-shadow: none
+          ~ nav
+            top: 0
+
+      label.nav--checkbox
+        background-color: $nav-background
+        margin: 0
+        position: absolute
+        top: 0
+        right: 0
+        padding: 1rem
+        font-family: icomoon
+        z-index: $index-2
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        &:after
+          content: "\e3c7"
+          text-shadow: $nav-ico-shadow
+          font-size: $nav-icon-size
+
+        @include respond-to(m)
+          display: none
+      
+      nav
+        position: absolute
+        top: -100vh
+        left: 0
+        width: 100%
+        height: auto
+        background-color: $nav-background
+        transition: all $animationtime
+
+        @include respond-to(m)
+          position: relative
+          top: 0
+          box-shadow: $shadow
+
+      ul
+
+        margin: 0
+        padding: 0 0 0 0
+        @include respond-to(m)
+          @include max-width()
+          position: relative
+          display: flex
+          justify-content: flex-end
+          padding: 3rem 0 .5rem 0
+      .logo
+        height: 3.5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        @include respond-to(m)
+          position: absolute
+          top: 0
+          left: 1rem
+          height: 100%
+      a
+        padding: .2rem 0
+        width: 100%
+        display: inline-block
+        cursor: pointer
+        color : $nav-color
+        &:visited
+          color : $nav-color
+
+        &:hover
+          text-decoration : none
+          color : $nav-color
+          background-color: darken($nav-background,2%)
+
+        &:focus
+          outline : none
+          color : $nav-color
+
+        @include respond-to(m)
+          padding: 0 .5rem
+          &:hover
+            background-color: transparent
+    .nav--fixed
+      position: fixed
+
+  @if $incluir-nav-colapsable == true
+    // BOWER
+    //   jquery - hammerjs
+    // HTML
+    //   <div id="menu-colapsable">
+    //     <div class="colapsable-menu colapsable">
+    //       <div class="colapsable-fondo"onclick="clickColapsable('cerrar')"></div>
+    //       <div class="colapsable-nav">
+    //         <nav>
+    //           <span class="colapsable-btn colapsable-cerrar"onclick="clickColapsable('cerrar')">x</span>
+    //           <ul>
+    //             <li>asd</li>
+    //             <li>asd</li>
+    //             <li>asd</li>
+    //             <li>asd</li>
+    //             <li>asd</li>
+    //             <li>asd</li>
+    //           </ul>
+    //         </nav>
+    //       </div>
+    //       <span class="colapsable-btn colapsable-abrir" onclick="clickColapsable('abrir')">&equiv;</span>
+    //       <div id="colapsable-area"></div>
+    //     </div>
+    //     <div class="colapsable-contenido"> 
+    //     </div>
+    //   </div>
+    #menu-colapsable
+      display: flex
+      background-color: $colapsable-menu
+      position: relative
+
+    .colapsable-menu
+      height: 100vh
+      @include position(fixed,top,left,0,0)
+      color: $colapsable-menu-font
+      z-index: $index-3
+      
+    .colapsable-btn
+      cursor: pointer
+      font-size: 2rem
+      padding: 1rem
+
+    .colapsable-abrir
+      @include position(fixed,top,left,0,0)
+      z-index: $index-1
+      font-family: icomoon
+      font-size: 2rem
+      text-shadow: 1px 1px 2px rgba($black,.4)
+      &:after
+        content: "\e3c7"
+
+    .colapsable-cerrar
+      @include position(absolute,top,right,0,0)
+      font-family: icomoon
+      font-size: 2rem
+      &:after
+        content: "\e5cd"
+
+    .colapsable-fondo
+      width: 100vw
+      height: 100vh
+      background-color: rgba(black,0.7)
+      display: none
+
+    .colapsable-nav
+      width: 280px
+      height: 100vh
+      @include position(fixed,top,left,0,-280px)
+      background-color: $colapsable-menu
+      transition-property: left
+      transition-duration: 0.3s
+      transition-timing-function: ease-in-out
+      box-shadow: $shadow
+      z-index: $index-2
+      &>nav
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100vh
+
+      a
+        color: $colapsable-menu-font
+
+    .colapsable-transition
+      left: 0
+
+    .colapsable-contenido
+      background-color: $background
+      width: 100vw
+      color: $colapsable-conte-font
+      height: 1000px
+
+    .contenido-block
+      overflow-y: hidden
+
+    #colapsable-area
+      width: 10px
+      height: 100vh
+      @include position(fixed,top,left,0,0)
+      
+    @include respond-to(m)
+      .colapsable-menu
+        width: 280px
+        position: relative
+
+      .colapsable-fondo
+        display: none
+
+      .colapsable-btn
+        display: none
+      
+      .colapsable-nav
+        left: 0
+
+      .colapsable-contenido
+        width: calc(100vw - 280px)
+
+    
