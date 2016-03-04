@@ -118,11 +118,11 @@ gulp.task('copy', function() {
 // y lanza las tareas relacionadas
 gulp.task('watch', function() {
   gulp.watch(['./app/**/*.html'], ['html']);
-  gulp.watch(['./app/stylesheets/**/*.sass'], ['css', 'inject']);
-  gulp.watch(['./app/scripts/**/*.js', './Gulpfile.js'], ['jshint', 'inject']);
+  gulp.watch(['./app/stylesheets/**/*.sass'], ['css']);
+  gulp.watch(['./app/scripts/**/*.js', './Gulpfile.js'], ['jshint']);
   gulp.watch(['./bower.json'], ['wiredep']);
 });
 
-gulp.task('default', ['server','inject','wiredep','watch']);
+gulp.task('default', ['watch']);
 
 gulp.task('build', ['compress','copy']);

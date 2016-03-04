@@ -18,7 +18,6 @@
   ],
   "dependencies": {
     "jquery": "~2.2.0",
-    "bxslider-4": "~4.2.5",
-    "hammerjs": "~2.0.6"
+    "bxslider-4": "^4.2.5"
   }
 }

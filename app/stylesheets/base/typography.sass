@@ -3,12 +3,14 @@
   -------------------------------------*/
 html,
 body
-  font-size: $basefontsize
+  font-size: 14px
   font-family: $basefont
   font-weight: $baseheadingfontweight
   line-height: $baselineheight
   background-color: $background
   color: $textcolor
+  @include respond-to(m)
+    font-size: $basefontsize
 
 // HEADINGS ====================================================
 
@@ -76,8 +78,8 @@ b, strong
 
 // Web Colours
 ::selection 
-  background-color : $basecolor 
-  color: $white
+  background-color : transparent
+  // color: $white
 
 
 // TYPOGRAFÍA EXTRA====================================================

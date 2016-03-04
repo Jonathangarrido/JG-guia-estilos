@@ -9,22 +9,22 @@
 
 // Qué objetos y abstracciones vamos a usar? (true: se usa, false: no se usa)
 
-$incluir-typografia-extra:  true!default
+$incluir-typografia-extra:  false!default
 
 $incluir-grid:              true!default
 $incluir-form:              true!default
 $incluir-links:             true!default
-$incluir-table:             true!default
+$incluir-table:             false!default
 $incluir-nav:               true!default
 
 $incluir-button:            true!default
-$incluir-texturas:          true!default
-$incluir-abstracciones:     true!default
+$incluir-texturas:          false!default
+$incluir-abstracciones:     false!default
 $incluir-iconos:            true!default
 $incluir-imagen:            true!default
-$incluir-video:             true!default
-$incluir-fullHome:          true!default
-$incluir-modal:             true!default
+$incluir-video:             false!default
+$incluir-fullHome:          false!default
+$incluir-modal:             false!default
 
 $incluir-bxslider:          true!default
 
@@ -45,7 +45,7 @@ $incluir-bxslider:          true!default
  
 //  (s: 48rem, m: 56.25rem, l: 68.75rem)
 
-$breakpoints: (s: 48rem, m: 56.25rem, l: 68.75rem)
+$breakpoints: (s: 48rem, m: 680px, l: 68.75rem)
 
 
 // -------------------------------------
@@ -84,7 +84,7 @@ $font-dir: "../fonts"
 $baselineheight :   1.5em
 $baseline :         $baselineheight
 $gutterwidth :      24px
-$pagemaxwidth :     860px
+$pagemaxwidth :     1000px
 $radius :           3px
 $hovertransition :  .3s
 $animationtime :    .3s
@@ -115,8 +115,8 @@ $index-4 : 99999999
 // $altfont para textos alternativos, como citas, intro, etc...
 // $codefont para código
   
-$basefont : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
-$altfont : Georgia, Times, "Times New Roman"
+$basefont : Arial, sans-serif
+$altfont : Arial
 $codefont : "Courier New", monospace
 $baseheadingfont : $altfont
 
@@ -135,7 +135,7 @@ $altlineheight : 1.35em
 
 // Definimos los tamaños de fuentes:
   
-$basefontsize   :   16px
+$basefontsize   :   18px
 
 
 //  Las variables de tamaño las definimos en un MAP, puedes añadir, quitar o cambiarlas.
@@ -159,7 +159,7 @@ $size-vars: (xs: .6rem, s: .8rem, m: 1rem, l: 1.5rem, xl:2rem)
   
 $basecolor      : rgb(255,86,18) // Naranja
 $basecolor-light: lighten($basecolor, 25%)
-$secondary      : rgb(34,50,204) // azul
+$secondary      : #F38206
 $tertiary       : rgb(118,255,43) // verde
 $bordercolor    : lighten($secondary, 20) // Bordes
 $compcolor      : rgb(216,240,227) //
@@ -299,7 +299,8 @@ $placeholdercolor   : $lightergrey
 
 
 // Navegación
-$nav-height:              4rem
+$nav-height:              6rem
+$nav-height-s:            3.5rem
 $nav-icon-size:           2rem
 $nav-color:               $black
 $nav-color-ico-shadow:    invert($nav-color)

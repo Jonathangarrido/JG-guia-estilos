@@ -1,0 +1,116 @@
+.casa
+ 
+  &>div
+    height: 100%
+  &-img
+    height: 100%
+    padding: 0
+    transition: all 1s
+    position: relative
+
+    img
+      height: 100%
+
+  &-info
+    display: flex
+    flex-direction: column
+    padding: 0
+    transition: all 1s
+
+  &-planta
+    background-color: #D4D0D1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    transition: all 1s
+    height: 35vh
+    position: relative
+
+  &-caracteristicas
+    padding: 0 2rem
+    display: flex
+    align-items: center
+    text-align: left
+    height: 65vh
+    transition: all 1s
+    h2
+      font-family: 'aftasansthin'
+      font-size: 2rem
+      line-height: 1.1em
+      margin-bottom: .5em
+    h1
+      font-size: 1.2rem
+    span
+      color: $secondary
+    p
+      margin-bottom: 3em
+      line-height: 1.5em
+  
+
+  .lista-iconos
+    margin-top: 4rem
+    display: flex
+    width: 100%
+    justify-content: center
+    text-align: center
+    &>div:not(:last-child)
+      margin-right: 3.2rem
+    img
+      height: 1.5rem
+    p
+      font-size: .8rem
+      margin-bottom: 0
+
+.planta-conte
+  background-color: #a7a7a7
+  position: absolute
+  bottom: 0
+  right: 0
+  height: 100%
+  width: 100%
+  transition: all .5s ease-in-out
+  z-index: $index-4
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  cursor: pointer
+  div
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+  button
+    border: none
+    background-color: transparent
+    font-size: 1rem
+    color: #545454
+    margin: .5rem 0
+    font-family: 'aftasansthin'
+    transition: all .3s ease-in-out
+
+span.cerrar-planta
+  display: none
+  position: fixed
+  top: 1rem 
+  right: 1rem
+  font-size: 2rem
+  cursor: pointer
+  color: $white
+  text-shadow: 1px 1px 5px rgba($black,.4)
+  z-index: $index-4
+  &:after
+    font-family: $font-family-icon
+    content: '\e5cd'
+    height: 1rem
+
+.planta-full
+  height: 100vh
+  width: 100vw
+  button
+    visibility: hidden
+  span
+    display: block
+
+.indexdown
+  z-index: $index-0 !important

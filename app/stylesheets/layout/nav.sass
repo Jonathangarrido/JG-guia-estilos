@@ -3,21 +3,22 @@
       ·NAV
    ------------------------------------*/
   $incluir-nav-normal : true
-  $incluir-nav-colapsable: true
+  $incluir-nav-colapsable: false
 
 
 
   @if $incluir-nav-normal == true
     .nav
-      position: absolute
+      position: relative
       top: 0
       left: 0
       width: 100%
       z-index: $index-4
+      height: $nav-height-s
+      background-color: $nav-background
       @include respond-to(m)
-        background-color: rgba(red,.2)
-        position: relative
-
+        height: $nav-height
+    
       input
         display: none
         &:checked 
@@ -36,11 +37,12 @@
         right: 0
         padding: 1rem
         font-family: icomoon
-        z-index: $index-2
+        z-index: $index-3
         display: flex
         justify-content: center
         align-items: center
         cursor: pointer
+        border-radius: 0px
         &:after
           content: "\e3c7"
           text-shadow: $nav-ico-shadow
@@ -55,40 +57,50 @@
         left: 0
         width: 100%
         height: auto
-        background-color: $nav-background
         transition: all $animationtime
 
         @include respond-to(m)
           position: relative
           top: 0
-          box-shadow: $shadow
 
       ul
-
-        margin: 0
+        margin-top: $nav-height-s
+        margin-bottom: 0
         padding: 0 0 0 0
         @include respond-to(m)
           @include max-width()
+          margin-top: 0
           position: relative
           display: flex
           justify-content: flex-end
           padding: 3rem 0 .5rem 0
+      
       .logo
-        height: 3.5rem
-        display: flex
-        justify-content: center
-        align-items: center
+        display: none
+        background: red
         @include respond-to(m)
+          display: block
+          display: flex
+          justify-content: center
+          align-items: center
           position: absolute
           top: 0
           left: 1rem
           height: 100%
+      li
+        &:last-child
+          a
+            @include respond-to(m)
+              padding: 0 0
+
       a
+        background-color: $nav-background
         padding: .2rem 0
         width: 100%
         display: inline-block
         cursor: pointer
         color : $nav-color
+        text-align: center
         &:visited
           color : $nav-color
 
@@ -105,6 +117,27 @@
           padding: 0 .5rem
           &:hover
             background-color: transparent
+      .nav--logo
+        @include respond-to(m)
+          
+      &>div
+        width: 100%
+        height: $nav-height-s
+        @include respond-to(m)
+          height: $nav-height 
+        &>div
+          @include max-width
+          background-color: $nav-background
+          height: $nav-height-s
+          display: flex
+          justify-content: flex-start
+          align-items: center
+          padding: 0 2rem
+          z-index: $index-2
+          @include respond-to(m)
+            height: $nav-height
+            @include max-width(1200px)
+            position: relative
     .nav--fixed
       position: fixed
 
